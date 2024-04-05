@@ -24,5 +24,5 @@ The output will be printed to the console every 10 seconds, showing the captured
 
 ### Output Image
 
-![Output Image](output_image.png)
+![Output Image](https://github.com/GOVARDAN-N-A/Keylogger/blob/main/Keylogger_output.png?raw=true)
 
