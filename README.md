@@ -26,3 +26,4 @@ The output will be printed to the console every 10 seconds, showing the captured
 
 ![Output Image](https://github.com/GOVARDAN-N-A/Keylogger/blob/main/Keylogger_output.png?raw=true)
 
+drive : https://docs.google.com/presentation/d/1oxjtDK3E96jX0-V1Ks5gjFnzOrnra5pA/edit?usp=drivesdk&ouid=113693414496751123790&rtpof=true&sd=true
